@@ -15,13 +15,19 @@ class App extends Component {
   onInputChange = (event) => {
     console.log(event.target.value)
   }
+  onClickSubmit = () => {
+    console.log('click');
+  }
   render() {
     return (
       <div className="App">
         <Navigation  />
         <Logo />
         <Rank />
-        <ImageLinkForm onInputChange={this.onInputChange} />
+        <ImageLinkForm 
+          onInputChange={this.onInputChange} 
+          onClickSubmit={this.onClickSubmit} 
+        />
       </div>
     );
   }
